@@ -1,11 +1,18 @@
 <div>
-  <%= @tasks.details %>
-  <p>This task is not completed yet</p>
+  <%= @task.details %>
 </div>
+<% if @task.completed %>
+  <input type="checkbox" checked />
+    <p>This task is completed</p>
+    <% else %>
+  <input type="checkbox" disabled/>
+    <p>This task is completed</p>
+    <% end %>
 
-<%= link_to "Ask Another Question", tasks_path%>
+<%= link_to "Back to List", tasks_path%>
 
-<!-- add a form input checkbox type to update method in the controller
-define update
-to update i need to fetch id 2 requests -->
+
+
+<%= link_to "Edit", edit_path(@task)%>
+
 
