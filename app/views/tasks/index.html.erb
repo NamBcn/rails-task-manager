@@ -3,7 +3,8 @@
 
 <!-- <div class="custom-control custom-checkbox"> -->
   <% @tasks.each do |task| %>
-    <p><%= task.completed %> <%= task.title %></p>
+    <p><%= task.completed %>
+      <%= link_to task.title, task_path(task)%></p>
     <!-- <input type="checkbox" class="custom-control-input" id="defaultUnchecked">
     <label class="custom-control-label" for="defaultUnchecked">Default unchecked</label> -->
 
@@ -12,10 +13,10 @@
 
 
 
+<!--
+clicking on the task opens a link: tasks/2 (show method)
+use link_to "back to links" to go back to task -->s
 
-<!-- clicking on the task opens a link: tasks/2 (show method)
-use link_to "back to links" to go back to tasks
- -->
 
 
 
