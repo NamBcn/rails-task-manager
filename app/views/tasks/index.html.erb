@@ -2,14 +2,23 @@
 <h1>My Tasks</h1>
 
 <!-- <div class="custom-control custom-checkbox"> -->
-  <% @tasks.each do |task| %>
-    <p><%= task.completed %>
-      <%= link_to task.title, task_path(task)%></p>
+<% @tasks.each do |task| %>
+<div>
+  <% if task.completed %>
+    <input type="checkbox" checked />
+  <% else %>
+      <input type="checkbox" disabled/>
+  <% end %>
+  </div>
+    <p><%= link_to task.title, task_path(task)%></p>
+
+
+
     <!-- <input type="checkbox" class="custom-control-input" id="defaultUnchecked">
     <label class="custom-control-label" for="defaultUnchecked">Default unchecked</label> -->
 
     <% end %>
-</div>
+
 
 
 
