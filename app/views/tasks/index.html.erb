@@ -1,1 +1,23 @@
-<%= @tasks %>
+
+<h1>My Tasks</h1>
+
+<!-- <div class="custom-control custom-checkbox"> -->
+  <% @tasks.each do |task| %>
+    <p><%= task.completed %> <%= task.title %></p>
+    <!-- <input type="checkbox" class="custom-control-input" id="defaultUnchecked">
+    <label class="custom-control-label" for="defaultUnchecked">Default unchecked</label> -->
+
+    <% end %>
+</div>
+
+
+
+
+<!-- clicking on the task opens a link: tasks/2 (show method)
+use link_to "back to links" to go back to tasks
+ -->
+
+
+
+
+
